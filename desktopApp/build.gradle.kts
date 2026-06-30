@@ -21,8 +21,23 @@ compose.desktop {
 
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = "com.amonteiro.a06_ynov_kmp"
+            packageName = "WeatherApp"
             packageVersion = "1.0.0"
+            description = "Une application météo"
+            vendor = "Cours Ynov"
+
+            windows {
+                shortcut = true
+                menu = true
+                // Icône pour l'application et l'installateur
+                //iconFile.set(project.file("src/commonMain/composeResources/drawable/my_icone.ico"))
+            }
+            macOS {
+                dockName = "WeatherApp"
+            }
+            linux {
+                shortcut = true
+            }
         }
     }
 }
